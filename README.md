@@ -5,15 +5,15 @@ Languages used: PHP, HTML, CSS, SQL (phpMyAdmin UI), JavaScript
 
 ## Dependencies
 * Web Server (such as [Apache](https://www.apache.org/))
-* MySQL Server
+* [MySQL](https://www.mysql.com/) Server
 
 ## Install
+0. Ensure you have the dependencies installed.
 1. Clone this repository into your Web Server's Document Root.
-2. Create a database (You can use a database managment software like [PHPMyAdmin](https://www.phpmyadmin.net/))
+2. Create a database (You can use a database managment software like [PHPMyAdmin](https://www.phpmyadmin.net/)) named `tunify` and import the `tunify/tunify.sql` file into the database.
 
 ## Run
-* Setup a database and name it `tunify` (can use **phpMyAdmin**) and import the sql file
-* Use your browser to view the website
+Ensure both your web server and MySQL server are running. Then use your web browser to naviagate to [localhost/tunify](http://localhost/tunify).
 
 ## Resources
 * [Udemy](https://www.udemy.com/spotify-clone/) course used as a guide to setup all the back-end and some front-end
