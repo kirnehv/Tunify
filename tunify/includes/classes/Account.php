@@ -54,7 +54,7 @@ class Account{
     $profilePic = "assets/images/profile-pics/Icon.png"; //grab profile pic from folder
     $date = date("Y-m-d"); //set date format
     //insert data in DB
-    $result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+    $result = mysqli_query($this->con, "INSERT INTO users VALUES (DEFAULT, '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
 
     return $result; //returns true or false
   }
