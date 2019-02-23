@@ -23,7 +23,8 @@
 <html>
 <!--Creates labels, input boxes, input box labels, buttons-->
   <head>
-    <title>Welcome to Tunify</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>Login</title>
     <!--link register.css file-->
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
     <!--lets us use javascript-->
@@ -55,6 +56,11 @@
     ?>
     <!--page background that surrounds all the code within it-->
     <div id="background">
+      <div class="navbar">
+        <a href="welcome.html">Home</a>
+        <a href="register.php">Login</a>
+        <a href="#contact">About</a>
+      </div>
       <div id="loginContainer">
         <h3> Tunify</h3>
         <div id="inputContainer">
