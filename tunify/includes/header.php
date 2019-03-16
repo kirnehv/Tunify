@@ -6,7 +6,7 @@ include("includes/classes/Album.php");
 include("includes/classes/Song.php");
 
 //destroys session so youre not logged in (until we create a logout button)
-session_destroy();
+// session_destroy();
 
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
@@ -19,6 +19,7 @@ if(isset($_SESSION['userLoggedIn'])){
 
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<title>Welcome to Tunify!</title>
 	<!--link style.css file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">

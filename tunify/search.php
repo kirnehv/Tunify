@@ -10,16 +10,17 @@ else {
 ?>
 
 <div class="searchContainer">
+	
 	<h4>Search for a song</h4>
 	<input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="Start typing..." onfocus="this.value = this.value">
 </div>
 
 <script>
 
+
 $(".searchInput").focus();
 
 $(function() {
-	var timer;
 
 	$(".searchInput").keyup(function() {
 		clearTimeout(timer);
@@ -33,6 +34,8 @@ $(function() {
 
 </script>
 
+<!-- if the search term is empty, stop loading -->
+<?php if($term == "") exit(); ?>
 
 <div class="tracklistContainer borderBottom">
 	<h2>SONGS</h2>
@@ -44,9 +47,6 @@ $(function() {
 		if(mysqli_num_rows($songsQuery) == 0) {
 			echo "<span class='noResults'>No songs found matching " . $term . "</span>";
 		}
-
-
-
 		$songIdArray = array();
 
 		$i = 1;
@@ -84,7 +84,6 @@ $(function() {
 
 			$i = $i + 1;
 		}
-
 		?>
 
 		<script>
@@ -93,4 +92,55 @@ $(function() {
 		</script>
 
 	</ul>
+</div>
+<div class="artistsContainer borderBottom">
+	<h2>ARTISTS</h2>
+	<?php
+	$artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '$term%' LIMIT 10");
+
+	if(mysqli_num_rows($artistsQuery) == 0) {
+		echo "<span class='noResults'>No artists found matching " . $term . "</span>";
+	}
+	while($row = mysqli_fetch_array($artistsQuery)) {
+		$artistFound = new Artist($con, $row['id']);
+
+		echo "<div class='searchResultRow'>
+				<div class='artistName'>
+
+					<span role='link' tabindex='0' onclick='openPage(\"artist.php?id=" . $artistFound->getId() ."\")'>
+					"
+					. $artistFound->getName() .
+					"
+					</span>
+
+				</div>
+
+			</div>";
+	}
+	?>
+</div>
+
+<div class="gridViewContainer">
+	<h2>ALBUMS</h2>
+	<?php
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '$term%' LIMIT 10");
+
+		if(mysqli_num_rows($albumQuery) == 0) {
+			echo "<span class='noResults'>No albums found matching " . $term . "</span>";
+		}
+
+		while($row = mysqli_fetch_array($albumQuery)) {
+
+			echo "<div class='gridViewItem'>
+					<span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")'>
+						<img src='" . $row['artworkPath'] . "'>
+
+						<div class='gridViewInfo'>"
+							. $row['title'] .
+						"</div>
+					</span>
+
+				</div>";
+		}
+	?>
 </div>

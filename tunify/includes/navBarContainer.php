@@ -1,7 +1,7 @@
 <div id="navBarContainer">
   <nav class="navBar">
     <a href="index.php" class="logo">
-      <img src="assets/images/icons/logo.png" alt="">
+      <img src="assets/images/icons/loginIcon.jpg" alt="">
     </a>
     <!--search bar for nav-->
     <div class="group">

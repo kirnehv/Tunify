@@ -57,12 +57,11 @@
     <!--page background that surrounds all the code within it-->
     <div id="background">
       <div class="navbar">
-        <a href="welcome.html">Home</a>
-        <a href="register.php">Login</a>
         <a href="#contact">About</a>
+        <a href="register.php">Login</a>
+        <a href="welcome.html">Home</a>
       </div>
       <div id="loginContainer">
-        <h3> Tunify</h3>
         <div id="inputContainer">
       		<a href="index.php" class="logo">
       			<img src="assets/images/icons/loginIcon.jpg" alt="">

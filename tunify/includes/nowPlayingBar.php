@@ -184,13 +184,13 @@ $jsonArray = json_encode($resultArray);
         //convert string data into an object so we can use it
         var artist = JSON.parse(data);
         //jquery object to display the artist at the nowPlayingBar
-        $(".artistName span").text(artist.name);
+        $(".trackinfo .artistName span").text(artist.name);
       });
       $.post("includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data){
         //convert string data into an object so we can use it
         var album = JSON.parse(data);
         //jquery object to display the album image at the nowPlayingBar
-        $(".albumLink img").attr("src", album.artworkPath);
+        $(".content .albumLink img").attr("src", album.artworkPath);
       });
       //set the track
       audioElement.setTrack(track);

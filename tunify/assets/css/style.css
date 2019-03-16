@@ -4,18 +4,21 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
 }
 
 /*star means that the code applies to all attributes*/
 *{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
   color: #fff;
 	letter-spacing: 1px;
 }
 
 /*center of index page (contents)*/
 body {
-	background-color: #031d26;
+	background-color: #0f6b8a;
 	font-size: 14px;
 	/*minimum elements should resize to*/
 	min-width: 720px;
@@ -23,7 +26,7 @@ body {
 
 #nowPlayingBarContainer {
   width: 100%;
-  background-color: #083645;
+  background-color: #0a475c;
   /*place bottom of the page (wont work without position: fixed)*/
   bottom: 0;
   position: fixed;
@@ -110,7 +113,7 @@ body {
 
 /*different color for current time*/
 .progressTime.current{
-  color: #F93602;
+  color: #4dd2ff;
 }
 
 .progressBar{
@@ -136,7 +139,7 @@ body {
 
 /*style actual progress bar*/
 .progress{
-  background-color: #F93602;
+  background-color: #4dd2ff;
   height: 4px;
   width: 0;
   border-radius: 2px;
@@ -171,7 +174,7 @@ body {
 /*change color of artist name and make font smaller*/
 #nowPlayingLeft .trackInfo .artistName span{
   font-size: 12px;
-  color: #F93602;
+  color: #4dd2ff;
 }
 
 /*style/align volume bar*/
@@ -194,7 +197,7 @@ body {
 
 /*create side nav bar...set color width, fixed*/
 #navBarContainer{
-  background-color: #021015;
+  background-color: #083645;
   width: 220px;
   /*vh is the view-height*/
   height: 100vh;
@@ -215,17 +218,19 @@ body {
 
 /*push items below logo down so theyre not touching the logo*/
 .logo{
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+	text-align: center;
 }
 
 /*make logo smaller*/
 .logo img{
-  width: 32px;
+  width: 70px;
+
 }
 
 /*style and add border for search bar*/
 .navBar .group{
-  border-top: 1px solid #F93602;
+  border-top: 1px solid #4dd2ff;
   /*10px top/bottom and 0 left/right*/
   padding: 10px 0;
 }
@@ -249,7 +254,7 @@ body {
 
 /*nav text changes color on hover*/
 .navItemLink:hover{
-	color: #F93602;
+	color: #4dd2ff;
 }
 
 /*style/align search icon*/
@@ -302,7 +307,6 @@ body {
 
 /*mainView items (album) names*/
 .gridViewInfo {
-	font-weight: 300;
 	text-align: center;
 	padding: 5px 0;
 	/*if text overflows, use ...*/
@@ -356,6 +360,7 @@ body {
 
 /*trackList is the tracks listed after the album is selected*/
 .trackList{
+	font-family: bolder;
 	padding: 0;
 }
 
@@ -367,12 +372,11 @@ body {
 }
 /*style span (text) for tracks*/
 .trackListRow span{
-	font-weight: 200;
 }
 
 /*trackList artist name into orange*/
 .trackListRow .trackInfo .artistName{
-	color: #F93602;
+	color: #4dd2ff
 }
 
 /*tracks turn lighter blue when mouse hovered over*/
@@ -448,6 +452,22 @@ body {
 	margin-bottom: 7px;
 }
 
+.artistInfo {
+    text-align: center;
+}
+
+.borderBottom{
+	border-bottom: 1px solid #4dd2ff;
+	margin-bottom: 20px;
+}
+.tracklistContainer h2,
+.gridViewContainer h2,
+.artistsContainer h2{
+	text-align: center;
+}
+[role="link"]{
+	cursor: pointer;
+}
 /*style search box*/
 .searchContainer {
     background-color: #083645;
@@ -470,9 +490,28 @@ body {
 }
 .searchContainer .searchInput::placeholder{
 	font-size: 30px;
-	color: #F93602;
+	color: #4dd2ff;
 }
 
 input:focus {
     outline: none;
+}
+.searchResultRow {
+    padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+    background-color: #083645;
+}
+
+.searchResultRow .artistName span {
+    color: #fff;
+}
+.searchResultRow .artistName span {
+    color: #fff;
+}
+
+.noResults {
+    margin: 15px;
+    display: block;
 }
