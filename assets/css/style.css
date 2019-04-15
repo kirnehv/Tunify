@@ -1,0 +1,522 @@
+/*comma means that we're applying the code {} to html and body*/
+/*gets rid of border padding of background*/
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
+}
+
+/*star means that the code applies to all attributes*/
+*{
+  font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
+  color: #0f6b8a;
+	letter-spacing: 1px;
+}
+
+/*center of index page (contents)*/
+body {
+	/* background-image: url(../images/background7.jpg); */
+	background-color: #9fb0be;
+	background-size: cover;
+	font-size: 14px;
+	/*minimum elements should resize to*/
+	min-width: 720px;
+}
+
+#nowPlayingBarContainer {
+  width: 100%;
+  /* background-color: #0a475c; */
+	background-color: #dbe9f4;
+  /*place bottom of the page (wont work without position: fixed)*/
+  bottom: 0;
+  position: fixed;
+  /*min width when making window smaller*/
+  min-width: 620px;
+}
+
+/*align entire bar*/
+#nowPlayingBar {
+  /*flexible display attribute that will adjust the height and width to fill blank space*/
+  display: flex;
+  height: 90px;
+  padding: 16px;
+  /*height is going to take into account the padding*/
+  box-sizing: border-box;;
+}
+
+/*align left and right sides of bar*/
+#nowPlayingLeft,
+#nowPlayingRight {
+  width: 30%;
+  min-width: 180px;
+}
+
+/*align right side of play bar (volume bar)*/
+#nowPlayingRight{
+  position: relative;
+  margin-top: 16px;
+}
+
+/*align center of bar*/
+#nowPlayingCenter{
+  width: 40%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nowPlayingBar .content{
+  width: 100%;
+  height: 57px;
+}
+
+/*align buttons*/
+.playerControls .buttons{
+  /*0 on top, auto for left and right*/
+  margin: 0 auto;
+  display: table;
+}
+
+/*make buttons transparent*/
+.controlButton{
+  background-color: transparent;
+  border: none;
+  /*vertically align buttons so if one button is bigger, they still align in the middle*/
+  vertical-align: middle;
+}
+
+/*resize buttons*/
+.controlButton img{
+  width: 20px;
+  height: 20px;
+}
+
+/*make play/pause button slightly bigger*/
+.controlButton.play img,
+.controlButton.pause img{
+  width: 32px;
+  height: 32px;
+}
+
+/*when hovering over buttons, cursor turns to pointer*/
+.controlButton:hover{
+  cursor: pointer;
+}
+
+.progressTime{
+  color: #0f6b8a;
+  font-size: 11px;
+  min-width: 40px;
+  text-align: center;
+}
+
+/*different color for current time*/
+.progressTime.current{
+  color: #4dd2ff;
+}
+
+.progressBar{
+  width: 100%;
+  height: 12px;
+  display: inline-flex;
+  /*lets cursor turn to pointer for user to grab*/
+  cursor: pointer;
+}
+
+/*make progress bar in between progress time and remaining time*/
+.playbackBar{
+  display: flex;
+}
+
+/*style progress bar background*/
+.progressBarBg{
+  background-color: #717171;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+/*style actual progress bar*/
+.progress{
+  background-color: #4dd2ff;
+  height: 4px;
+  width: 0;
+  border-radius: 2px;
+}
+
+/*move playback bar a little down by adding a top margin*/
+.playbackBar .progressBar{
+  margin-top: 3px;
+}
+
+/*resize song cover to the left of play bar*/
+#nowPlayingLeft .albumArtwork{
+  height: 100%;
+  max-width: 57px;
+  margin-right: 15px;
+  float: left;
+  /*scales the image as large as it can to cover all space*/
+  background-size: cover;
+}
+
+#nowPlayingLeft .trackInfo{
+  display: table;
+}
+
+/*style the track name and artist name text next to cover image*/
+#nowPlayingLeft .trackInfo .trackName{
+  margin: 6px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+/*change color of artist name and make font smaller*/
+#nowPlayingLeft .trackInfo .artistName span{
+  font-size: 12px;
+  color: #4dd2ff;
+}
+
+/*style/align volume bar*/
+.volumeBar{
+  width: 180px;
+  position: absolute;
+  right: 0;
+}
+
+/*set width of progress bar*/
+.volumeBar .progressBar{
+  width: 125px;
+}
+
+/*adjust container for side navi and center menu */
+#topContainer{
+  min-height: 100%;
+  width: 100%;
+}
+
+/*create side nav bar...set color width, fixed*/
+#navBarContainer{
+  background-color: #c7ddee;
+  width: 220px;
+  /*vh is the view-height*/
+  height: 100vh;
+  /*fixed means even if we scroll it stays there*/
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/*style nav bar*/
+.navBar{
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  /*internet explorer support */
+  -ms-flex-direction: column;
+}
+
+/*push items below logo down so theyre not touching the logo*/
+.logo{
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+/*make logo smaller*/
+.logo img{
+  width: 70px;
+
+}
+
+/*style and add border for search bar*/
+.navBar .group{
+  border-top: 1px solid #4dd2ff;
+  /*10px top/bottom and 0 left/right*/
+  padding: 10px 0;
+}
+
+/*All nav items*/
+.navItem{
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  letter-spacing: 1px;
+	position: relative;
+}
+
+/*style nav text*/
+.navItemLink{
+	color: #0f6b8a;
+	/*removes underline from text*/
+	text-decoration: none;
+}
+
+/*nav text changes color on hover*/
+.navItemLink:hover{
+	color: #4dd2ff;
+}
+
+/*style/align search icon*/
+.navItemLink .icon {
+	/*positioned according to its parent*/
+	position: absolute;
+	right: 0;
+	top: 6px;
+	width: 25px;
+}
+
+/*center contents, mainView*/
+#mainViewContainer{
+	/*nav container is 220px wide, so the main view needs to have a left margin of 220px*/
+	margin-left: 220px;
+	/*height of nowPlayingBar is 90px, so we give the main view 90px bottom padding*/
+	padding-bottom: 90px;
+	/*width is 100% - the nav bar (220px)*/
+	width: calc(100% - 220px);
+}
+
+/*mainView*/
+#mainContent{
+	/*top/bottom=0...left/right=20px*/
+	padding: 0 20px;
+}
+
+/*add padding to big header*/
+.pageHeadingBig{
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+/*style the mainView items (albums/artwork)*/
+.gridViewItem{
+	/*align side-by-side*/
+	display: inline-block;
+	margin-right: 20px;
+	width: 29%;
+	max-width: 300px;
+	min-width: 150px;
+	margin-bottom: 20px;
+}
+
+/*mainView items (set size for images)*/
+.gridViewItem img{
+	width: 300px;
+	height: 300px;
+}
+
+/*mainView items (album) names*/
+.gridViewInfo {
+	color: white;
+	text-align: center;
+	padding: 5px 0;
+	/*if text overflows, use ...*/
+	text-overflow: ellipsis;
+	/*hide any overflow*/
+	overflow: hidden;
+	/*prevents text wrapping below itself*/
+	white-space: nowrap;
+}
+
+/*remove underline from album names*/
+.gridViewItem a {
+	text-decoration: none;
+}
+
+/*align album info after album has been clicked*/
+.entityInfo{
+	padding: 40px 0 10px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+/*entitInfo is the page after the album is selected from mainView
+  leftSection is the image and rightSection is the name, artist, and # of songs*/
+.entityInfo .leftSection{
+	width: 30%;
+	float: left;
+	max-width: 250px;
+}
+
+/*set size for image*/
+.entityInfo .leftSection img{
+	width: 100%;
+}
+
+.entityInfo .rightSection{
+	width: 70%;
+	float: left;
+	padding: 5px 10px 5px 40px;
+	box-sizing: border-box;
+}
+
+.entityInfo .rightSection h2{
+	margin-top: 0px;
+}
+
+.entityInfo .rightSection p{
+	color: #F93602;
+	font-weight: 200;
+}
+
+/*trackList is the tracks listed after the album is selected*/
+.trackList{
+	font-family: bolder;
+	padding: 0;
+}
+
+.trackListRow{
+	height: 40px;
+	padding: 15px 10px;
+	/*remove bullet point*/
+	list-style: none;
+}
+/*style span (text) for tracks*/
+.trackListRow span{
+}
+
+/*trackList artist name into orange*/
+.trackListRow .trackInfo .artistName{
+	color: #4dd2ff
+}
+
+/*tracks turn lighter blue when mouse hovered over*/
+.trackListRow:hover{
+	background-color: #083645;
+}
+
+.trackListRow .trackCount{
+	width: 8%;
+	float: left;
+}
+
+/*hide the play button*/
+.trackListRow .trackCount img{
+	width: 20px;
+	visibility: hidden;
+	position: absolute;
+	cursor: pointer;
+}
+
+/*show the play button only when hovered over the track*/
+.trackListRow:hover .trackCount img{
+	visibility: visible;
+}
+
+/*by default show the number*/
+.trackListRow .trackCount span{
+	visibility: visible;
+}
+
+/*hide the number when mouse hovers over it (opposite of play button)*/
+.trackListRow:hover .trackCount span{
+	visibility: hidden;
+}
+
+.trackListRow .trackInfo{
+	width: 75%;
+	float: left;
+}
+
+/*end-line for track info span elements (name and artist under each other)*/
+.trackListRow .trackInfo span{
+	display: block;
+}
+
+/*bring track options to the right (3 dots)*/
+.trackListRow .trackOptions{
+	width: 5%;
+	float: left;
+	text-align: right;
+}
+
+/*hide options by default*/
+.trackListRow .trackOptions img{
+	width: 15px;
+	visibility: hidden;
+}
+
+/*show options when hover over track*/
+.trackListRow:hover .trackOptions img{
+	width: 15px;
+	visibility: visible;
+}
+
+.trackListRow .trackDuration{
+	 width: 12%;
+	 float: left;
+	 text-align: right;
+}
+
+/*push artist down from track name*/
+.trackListRow .trackInfo .trackName{
+	margin-bottom: 7px;
+}
+
+.artistInfo {
+    text-align: center;
+}
+
+.borderBottom{
+	border-bottom: 1px solid #4dd2ff;
+	margin-bottom: 20px;
+}
+.tracklistContainer h2,
+.gridViewContainer h2,
+.artistsContainer h2{
+	text-align: center;
+}
+[role="link"]{
+	cursor: pointer;
+}
+/*style search box*/
+.searchContainer {
+    background-color: #083645;
+    padding: 20px 28px;
+}
+
+.searchContainer h4 {
+    margin: 0;
+    font-weight: 300;
+}
+/*style the start typing... section*/
+.searchContainer .searchInput {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.searchContainer .searchInput::placeholder{
+	font-size: 30px;
+	color: #4dd2ff;
+}
+
+input:focus {
+    outline: none;
+}
+.searchResultRow {
+    padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+    background-color: #083645;
+}
+
+.searchResultRow .artistName span {
+    color: #fff;
+}
+.searchResultRow .artistName span {
+    color: #fff;
+}
+
+.noResults {
+    margin: 15px;
+    display: block;
+}

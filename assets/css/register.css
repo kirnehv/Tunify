@@ -1,0 +1,242 @@
+/*this is how you reference IDs...#id*/
+
+/*comma means that we're applying the code {} to html and body*/
+/*gets rid of border padding of background*/
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#background{
+  background-color: #fff;
+  background-image: url(../images/background5.jpg);
+  background-position: center;
+  background-size: cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/*the * means all...this code will be applied to everything in the loginContainer*/
+#loginContainer * {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  /*em = whatever the font size is currently...eg 12*/
+  /* line-height: 1em; */
+  font-size: 15px;
+  /*when specifying width, it will take into account padding and margins*/
+  box-sizing: border-box;
+
+
+}
+
+#loginContainer{
+  /*login container only consists of 80% of the page*/
+  width: 80%;
+  /*auto gives the loginContainer a little bit of a margin (left/right) and centers it*/
+  /*0 sets the height margin to 0*/
+  margin: 0 auto;
+  position: relative;
+  /*dont let this get bigger than 1024 pixels*/
+  max-width: 1024px;
+  margin-top:150px;
+  margin-bottom: 100px;
+}
+
+/*the next 6 functions are for placeholder color supporting all browsers*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   rgb(88, 102, 116, 1);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #fff;
+}
+::placeholder { /* Most modern browsers support this now. */
+   color:    rgb(88, 102, 116, .9);
+}
+
+#inputContainer{
+  box-shadow: 0 0 20px 5px grey;
+  width: 500;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 10px 55px 37px 55px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: center;
+  /* background-color: rgba(242,243,244, 1); */
+  background-color: #f8f8ff;
+
+}
+
+/*h2 is the tag that refers to the Login header*/
+#inputContainer h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #778899;
+}
+
+/*this code applies to all the input fields of type text, email and password*/
+#inputContainer input[type="text"],
+#inputContainer input[type="email"],
+#inputContainer input[type="password"]{
+  /*the text box will be on its own line*/
+  /*display: block;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  height: 45px;
+  line-height: 30px;
+  width: 100%;*/
+
+  /*border: 0;
+  display: block;
+  width: 90%;
+  background-color: #249CE1;
+  height: 40px;
+  border-radius: 25px;
+  padding: 4px 30px 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: center;*/
+
+  font-size: 16px;
+
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  padding: 0px 0px 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: center;
+  border: 0;
+
+  border-bottom: 2px solid rgba(99, 115, 131, 0.24);
+  margin-bottom: 30px;
+}
+
+#inputContainer label {
+  color: #fff;
+  font-size: 15px;
+  display: block;
+  margin-top: 15px;
+}
+
+#inputContainer button {
+  /* background-color: rgb(133, 205, 250); */
+  background-color: rgb(51, 204, 255);
+  /* border: 1px solid #fff; */
+  /*roundness of border*/
+  border-radius: 100px;
+  /* color: #fff; */
+  /*appear on its own block*/
+  display: block;
+  font-size: 17px;
+  letter-spacing: 1px;
+  margin: 20px auto;
+  height: 50px;
+  width: 30%;
+  font-weight: bold;
+  border: 0;
+}
+/*mouse shows hand interaction*/
+#inputContainer button:hover {
+  cursor: pointer;
+  background-color: rgb(151, 220, 252);
+}
+
+/*styling the hasAccountText*/
+.hasAccountText span {
+  font-weight: bolder;
+  font-size: 12px;
+  /*mouse shows hand interaction*/
+  cursor: pointer;
+}
+
+.hasAccountText{
+  text-align: center;
+}
+
+/*doesnt let registerForm or loginForm flicker when refreshing page*/
+#registerForm,
+#loginForm{
+  display: none;
+}
+/*style error messages*/
+#inputContainer .errorMessage{
+  color: red;
+  font-size: 12px;
+  margin-top: 15px;
+  display: block;
+}
+
+/*make logo smaller*/
+.logo img{
+  padding: 50px 10px 30px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#loginContainer h3 {
+  font-size: 30px;
+  position: absolute;
+  right: -200px;
+  margin-top:60px;
+  font-style: italic;
+}
+#hideRegister, #hideLogin{
+  color: rgba(99, 115, 131, .8);
+}
+
+#loginUsername, #loginPassword, #username, #password,
+#password2, #firstName, #lastName, #email, #email2{
+  color: rgb(88, 102, 116, 1);
+}
+
+.hasAccountText span:hover{
+    color: rgb(72,72,72, .9) !important;
+}
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 80px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin-right: 50px;
+  margin-top: 15px;
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 80px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  color: rgb(51, 204, 255);
+}
+/* ---------------------------------------------------------------------------- */
