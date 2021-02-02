@@ -21,4 +21,3 @@ Languages used: PHP, HTML, CSS, SQL (phpMyAdmin UI), JavaScript
 
 ## Resources
 * [Udemy](https://www.udemy.com/spotify-clone/) course used as a guide to setup all the back-end and some front-end
-* Google and YouTube to get PHP connections working
