@@ -3,6 +3,10 @@ A Spotify like web app music player that was created to learn some back-end and 
 
 Languages used: PHP, HTML, CSS, SQL (phpMyAdmin UI), JavaScript
 
+![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_3.png?raw=true)
+![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_1.png?raw=true)
+![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_2.png?raw=true)
+
 ## Dependencies
 * Web Server (such as [Apache](https://www.apache.org/))
 * MySQL Server
