@@ -18,6 +18,3 @@ Languages used: PHP, HTML, CSS, SQL (phpMyAdmin UI), JavaScript
 ## Run
 * Setup a database and name it `tunify` (can use **phpMyAdmin**) and import the sql file
 * Use your browser to view the website
-
-## Resources
-* [Udemy](https://www.udemy.com/spotify-clone/) course used as a guide to setup all the back-end and some front-end
