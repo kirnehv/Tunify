@@ -1,5 +1,5 @@
 # Tunify
-A Spotify like web app music player that was created to learn some back-end and front-end web developing.
+A Spotify like web app music player.
 
 Languages used: PHP, HTML, CSS, SQL (phpMyAdmin UI), JavaScript
 
