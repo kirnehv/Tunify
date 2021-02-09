@@ -1,8 +1,10 @@
 version: '3.8'
 services:
   web:
-    image: nginx:latest
     container_name: tunify-web
+    build:
+      context: .
+      target: tunify-web
     ports:
       - "8080:80"
 
