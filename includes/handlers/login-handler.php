@@ -6,9 +6,9 @@ if(isset($_POST['loginButton'])){
 
   //call function to check is username or password exist
   $result = $account->login($username, $password);
-  echo "<script>console.log('About to check' );</script>";
+  debug_to_console("About to check");
   if($result == true){
-    echo "<script>console.log('Debug Objects: " . $result . "' );</script>";
+    debug_to_console("Were in");
     //create a session variable to keep track of logged in user throughout pages
     $_SESSION['userLoggedIn'] = $username;
     header("Location: welcome.php");
