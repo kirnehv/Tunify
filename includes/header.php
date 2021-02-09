@@ -19,7 +19,7 @@ if(isset($_SESSION['userLoggedIn'])){
 
 <html>
 <head>
-	<link rel="icon" type="image/jpg" href="../assets/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="../favicon.ico" />
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<title>Welcome to Tunify!</title>
 	<!--link style.css file-->
