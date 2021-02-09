@@ -1,13 +1,10 @@
 version: '3.8'
 services:
-  php:
-    build: .
-    volumes:
-      - ./:/code
-    environment:
-      XDEBUG_CONFIG: remote_host=host.docker.internal
-    links:
-      - mysql
+  web:
+    image: nginx:latest
+    container_name: tunify-web
+    ports:
+      - "8080:80"
 
   mysql:
     image: mysql:latest
