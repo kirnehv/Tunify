@@ -16,6 +16,7 @@ function debug_to_console($data) {
 //destroys session so youre not logged in (until we create a logout button)
 // session_destroy();
 debug_to_console("here");
+debug_to_console($_SESSION['userLoggedIn']);
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
