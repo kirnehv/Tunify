@@ -39,7 +39,7 @@ if(isset($_POST['registerButton'])){
 
   if($wasSuccessful == true){ //if there are no errors
     $_SESSION['userLoggedIn'] = $username;
-    header("Location: index.php"); //redirect to index page
+    header("Location: welcome.php"); //redirect to index page
   }
 }
 ?>

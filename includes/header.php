@@ -13,7 +13,7 @@ if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
 	session_start();
 }else{
-	header("Location: welcome.php");
+	header("Location: index.php");
 	die();
 }
 

@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
   $albumId = $_GET['id'];
 }else{
   //redirect to index page is no album is found in db
-  header("Location: index.php");
+  header("Location: welcome.php");
 }
 //retreive album name
 $album = new Album($con, $albumId);

@@ -3,8 +3,8 @@
 	//album.php
 		- is the page after the index once an album is selected
 		- contains all the divs for the album and track list
-	
-	//index.php
+
+	//welcome.php
 		- first page after login
 		- keeps the left nav bar and bottom playing bar on the screen at all times
 		- displays favorite albums
@@ -13,7 +13,7 @@
 		- displays register form for login and create a new user
 		- Shows all the text and buttons for user to interact with
 		- calls other file/function for errors
-	
+
 	//search.php
 		- handles the search function located in the side navBar
 		- uses javascript to search for songs (waits 1 second)
@@ -28,10 +28,10 @@
 		- style playing bar on the bottom
 
 #tunify/assets/js
-	
+
 	//register.js
 		- hide login or create new account forms
-	
+
 	//script.js
 		- javacript file used to play and pause the song file passed in
 		- format the time/duration
@@ -52,12 +52,12 @@
 		- top half of index when it was split
 		- consists of the side navBar and mainView albums
 		- checks if user is logged in, if not, reroute to index
-	
+
 	//includedFiles.php
 		- includes config, artist, album, song, header, footer files
 		- only need to call this file once to include all these files
 
-	
+
 	//navBarContainer.php
 		- contains all the divs for the left side navigation bar
 
@@ -89,7 +89,7 @@
 		- title, artistId, albumId, genre, duration, path
 
 #tunify/includes/handlers/
-	
+
 	//login-handler.php
 		- handles "login to account"
 		- takes care of inputs: text boxes and buttons
@@ -105,7 +105,7 @@
 		- if no errors, takes user to next page
 
 #tunify/includes/handlers/ajax/
-	
+
 	//getAlbumJson.php
 		- retreives album from db for javacript tags to be able to use them
 
@@ -114,11 +114,6 @@
 
 	//getSongJson.php
 		- retreives song files from db for javacript tags to be able to use them
-	
+
 	//updatePlays.php
 		- updates number of song plays to the db
-
-
-
-
-

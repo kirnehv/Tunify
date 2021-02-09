@@ -10,7 +10,7 @@ if(isset($_POST['loginButton'])){
   if($result == true){
     //create a session variable to keep track of logged in user throughout pages
     $_SESSION['userLoggedIn'] = $username;
-    header("Location: index.php");
+    header("Location: welcome.php");
   }
 }
 ?>

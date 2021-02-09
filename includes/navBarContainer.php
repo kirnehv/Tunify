@@ -1,6 +1,6 @@
 <div id="navBarContainer">
   <nav class="navBar">
-    <a href="index.php" class="logo">
+    <a href="welcome.php" class="logo">
       <img src="assets/images/icons/loginIcon.jpg" alt="">
     </a>
     <!--search bar for nav-->
