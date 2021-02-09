@@ -18,10 +18,7 @@
         <a href="browse.php" class="navItemLink">Browse</a>
       </div>
       <div class="navItem">
-        <a href="myMusic.php" class="navItemLink">My Music</a>
-      </div>
-      <div class="navItem">
-        <a href="profile.php" class="navItemLink">Some Name</a>
+        <a href="browse.php" class="navItemLink">My Music</a>
       </div>
     </div>
   </nav>
