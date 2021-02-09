@@ -5,7 +5,7 @@ FROM nginx:latest
 EXPOSE 80
 
 # Copy static assets into var/www
-COPY ./* /usr/share/nginx/html
+COPY ./* /usr/share/nginx/html/
 
 # Start up nginx server
 CMD ["nginx"]
