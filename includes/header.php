@@ -19,11 +19,12 @@ debug_to_console("here");
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
+	header("Location: welcome.php");
 	debug_to_console("logged-in");
 }else{
 	debug_to_console("route");
 	// header("Location: index.php");
-	// echo "<script> location.replace('index.php'); </script>";
+	echo "<script> location.replace('index.php'); </script>";
 	// die();
 }
 
