@@ -6,11 +6,13 @@ services:
       - "8080:80"
     volumes:
         - ./:/tunify-code
-
+    links:
+      - php
   php:
       image: php:7-fpm
+      container_name: tunify-php
       volumes:
-          - ./:/tunify-code
+        - ./:/tunify-code
 
   mysql:
     image: mysql:latest
