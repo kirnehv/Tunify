@@ -7,11 +7,11 @@ include("includes/classes/Song.php");
 
 //destroys session so youre not logged in (until we create a logout button)
 // session_destroy();
-echo "I am here";
+echo "<script>console.log('here' );</script>";
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
-	echo "Here";
+	echo "<script>console.log('User logged in' );</script>";
 }else{
 	// header("Location: index.php");
 	echo "<script> location.replace('index.php'); </script>";
