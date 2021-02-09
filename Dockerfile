@@ -1,5 +1,5 @@
 # Pull nginx base image
-FROM nginx:latest as tunify-web
+FROM nginx:latest
 
 # Expost port 80
 EXPOSE 80
