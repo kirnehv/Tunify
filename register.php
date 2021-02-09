@@ -63,7 +63,7 @@
       </div>
       <div id="loginContainer">
         <div id="inputContainer">
-      		<a href="welcome.php" class="logo">
+      		<a href="index.php" class="logo">
       			<img src="assets/images/icons/loginIcon.jpg" alt="">
       		</a>
           <!--Login form-->
