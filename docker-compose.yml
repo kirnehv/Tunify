@@ -4,8 +4,13 @@ services:
     build: .
     ports:
       - "8080:80"
+    volumes:
+        - ./:/tunify-code
+
   php:
       image: php:7-fpm
+      volumes:
+          - ./:/tunify-code
 
   mysql:
     image: mysql:latest
