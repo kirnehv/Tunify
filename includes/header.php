@@ -15,14 +15,15 @@ function debug_to_console($data) {
 
 //destroys session so youre not logged in (until we create a logout button)
 // session_destroy();
-debug_to_console("Test");
+debug_to_console("here");
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
-	debug_to_console("Test");
+	debug_to_console("logged-in");
 }else{
 	// header("Location: index.php");
-	debug_to_console("Test");
+	echo "<script> location.replace('index.php'); </script>";
+	debug_to_console("route");
 	// die();
 }
 
