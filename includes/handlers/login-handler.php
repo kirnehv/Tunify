@@ -1,10 +1,5 @@
 <?php
 if(isset($_POST['loginButton'])){
-  debug_to_console("About to check");
-  //Login button was pressed
-  $username = $_POST['loginUsername'];
-  $password = $_POST['loginPassword'];
-
   function debug_to_console($data) {
       $output = $data;
       if (is_array($output))
@@ -12,6 +7,10 @@ if(isset($_POST['loginButton'])){
 
       echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
   }
+  debug_to_console("About to check");
+  //Login button was pressed
+  $username = $_POST['loginUsername'];
+  $password = $_POST['loginPassword'];
 
   //call function to check is username or password exist
   $result = $account->login($username, $password);
