@@ -59,7 +59,7 @@
       <div class="navbar">
         <a href="#contact">About</a>
         <a href="register.php">Login</a>
-        <a href="welcome.html">Home</a>
+        <a href="index.php">Home</a>
       </div>
       <div id="loginContainer">
         <div id="inputContainer">
