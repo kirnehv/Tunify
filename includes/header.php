@@ -14,7 +14,7 @@ if(isset($_SESSION['userLoggedIn'])){
 	session_start();
 }else{
 	// header("Location: index.php");
-	<script> location.replace("index.php"); </script>
+	echo "<script> location.replace('index.php'); </script>;"
 	// die();
 }
 
