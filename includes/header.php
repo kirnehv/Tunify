@@ -11,8 +11,6 @@ include("includes/classes/Song.php");
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
-}else{
-	header("Location: welcome.php");
 }
 
 ?>
