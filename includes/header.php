@@ -11,11 +11,12 @@ session_destroy();
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
-}else{
-	// header("Location: index.php");
-	echo "<script> location.replace('index.php'); </script>";
-	// die();
 }
+// else{
+// 	// header("Location: index.php");
+// 	echo "<script> location.replace('index.php'); </script>";
+// 	// die();
+// }
 
 ?>
 
