@@ -12,7 +12,6 @@ include("includes/classes/Song.php");
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
 }else{
-	debug_to_console("route");
 	header("Location: index.php");
 	// echo "<script> location.replace('index.php'); </script>";
 	// die();
