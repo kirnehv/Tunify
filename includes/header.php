@@ -21,8 +21,8 @@ if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
 	debug_to_console("logged-in");
 }else{
-	// header("Location: index.php");
-	echo "<script> location.replace('index.php'); </script>";
+	header("Location: index.php");
+	// echo "<script> location.replace('index.php'); </script>";
 	debug_to_console("route");
 	// die();
 }
