@@ -1,0 +1,41 @@
+version: '3.8'
+
+web:
+  image: nginx:latest
+  ports:
+    - "8080:80"
+  volumes:
+    - ./:/code
+  links:
+    - php
+
+php:
+  build: .
+  volumes:
+    - ./:/code
+  environment:
+    XDEBUG_CONFIG: remote_host=host.docker.internal
+  links:
+    - mysql
+
+mysql:
+  image: mysql:latest
+  container_name: tunify-db
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: tunify
+    MYSQL_DATABASE: dbName
+    MYSQL_USER: dbUser
+    MYSQL_PASSWORD: tunify
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links:
+    - mysql:db
+  ports:
+    - "8082:80"
+  environment:
+    - PMA_USER=root
+    - PMA_PASSWORD=password
+    - PHP_UPLOAD_MAX_FILESIZE=100MB
