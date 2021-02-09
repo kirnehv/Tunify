@@ -12,7 +12,7 @@ include("includes/classes/Song.php");
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
 }else{
-	header("Location: welcome.html");
+	header("Location: welcome.php");
 }
 
 ?>
