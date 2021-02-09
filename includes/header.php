@@ -5,27 +5,16 @@ include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
 include("includes/classes/Song.php");
 
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
-
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
-
 //destroys session so youre not logged in (until we create a logout button)
 // session_destroy();
-debug_to_console("here");
-debug_to_console($_SESSION['userLoggedIn']);
+
 //if user is logged in, enter next page | else, reroute to original page
 if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
-	header("Location: welcome.php");
-	debug_to_console("logged-in");
 }else{
 	debug_to_console("route");
-	// header("Location: index.php");
-	echo "<script> location.replace('index.php'); </script>";
+	header("Location: index.php");
+	// echo "<script> location.replace('index.php'); </script>";
 	// die();
 }
 
