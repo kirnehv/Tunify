@@ -1,6 +1,6 @@
 <?php
   ob_start();
-  // session_start(); //save varibale values accross pages
+  session_start(); //save varibale values accross pages
 
   $timezone = date_default_timezone_set("America/Los_Angeles");
 
