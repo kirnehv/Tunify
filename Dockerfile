@@ -1,11 +1,5 @@
 # Pull nginx base image
-FROM nginx:latest
+FROM nginx
 
-# Expost port 80
-EXPOSE 80
-
-# Copy static assets into var/www
-COPY ./* /usr/share/nginx/html/
-
-# Start up nginx server
-CMD ["nginx"]
+# Copy static assets
+COPY . /usr/share/nginx/html
