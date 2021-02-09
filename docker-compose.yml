@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "8080:80"
+  php:
+      image: php:7-fpm
 
   mysql:
     image: mysql:latest
