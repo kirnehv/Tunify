@@ -1,5 +1,6 @@
 <?php
-
+//instead if writing session_start() again, we jut reference the config.php file
+include("includes/config.php");
 include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
 include("includes/classes/Song.php");
@@ -12,11 +13,11 @@ if(isset($_SESSION['userLoggedIn'])){
 	$userLoggedIn = $_SESSION['userLoggedIn'];
 	session_start();
 }else{
-	header("Location: index.php");
-	die();
+	// header("Location: index.php");
+	<script> location.replace("index.php"); </script>
+	// die();
 }
-//instead if writing session_start() again, we jut reference the config.php file
-include("includes/config.php");
+
 ?>
 
 <html>
