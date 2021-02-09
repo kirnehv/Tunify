@@ -18,7 +18,8 @@ if(isset($_POST['loginButton'])){
     debug_to_console("Were in");
     //create a session variable to keep track of logged in user throughout pages
     $_SESSION['userLoggedIn'] = $username;
-    header("Location: welcome.php");
+    // header("Location: welcome.php");
+    echo "<script> location.replace('welcome.php'); </script>";
   }
 }
 ?>
