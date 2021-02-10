@@ -130,6 +130,7 @@
             <p>
               <!-- <label for="password2">Confirm password</label> -->
               <input id="password2" name="password2" type="password" placeholder="Confirm Password" required>
+              <?php echo $account->getError(Constants::$regUnavailable); ?>
             </p>
             <button type="submit" name="registerButton">Sign Up</button>
             <!--hides the Create new account form-->

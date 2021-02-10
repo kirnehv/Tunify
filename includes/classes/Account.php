@@ -24,7 +24,8 @@ class Account{
     }
   }
   public function register($un, $fn, $ln, $em, $em2, $pw, $pw2){
-    return "<span class='errorMessage'>Please contact admin for registration.</span>";
+    array_push($this->errorArray, Constants::$regUnavailable);
+    return;
     // $this->validateUsername($un);
     // $this->validateFirstName($fn);
     // $this->validateLastName($ln);

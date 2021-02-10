@@ -16,6 +16,8 @@ class Constants{
   //login error messages
   public static $loginFailed = "Your username or password was incorrect";
 
+  // registration not available
+  public static $regUnavailable = "Please contact admin for registration";
 
 }
 
