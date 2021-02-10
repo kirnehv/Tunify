@@ -1,6 +1,5 @@
 <?php
 //instead if writing session_start() again, we jut reference the config.php file
-session_start();
 include("includes/config.php");
 include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
