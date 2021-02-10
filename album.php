@@ -1,4 +1,3 @@
-<!--top half of the original index-->
 <?php include("includes/header.php");
 
 //retreive id number from selected album
