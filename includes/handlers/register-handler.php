@@ -25,22 +25,21 @@ function sanitizeFormString($inputText){
 
 if(isset($_POST['registerButton'])){
   //Register button was pressed
-  // $username = sanitizeFormUsername($_POST['username']);
-  // $firstName = sanitizeFormString($_POST['firstName']);
-  // $lastName = sanitizeFormString($_POST['lastName']);
-  // $email = sanitizeFormString($_POST['email']);
-  // $email2 = sanitizeFormString($_POST['email2']);
-  // $password = sanitizeFormPassword($_POST['password']);
-  // $password2 = sanitizeFormPassword($_POST['password2']);
+  $username = sanitizeFormUsername($_POST['username']);
+  $firstName = sanitizeFormString($_POST['firstName']);
+  $lastName = sanitizeFormString($_POST['lastName']);
+  $email = sanitizeFormString($_POST['email']);
+  $email2 = sanitizeFormString($_POST['email2']);
+  $password = sanitizeFormPassword($_POST['password']);
+  $password2 = sanitizeFormPassword($_POST['password2']);
 
   //calls register function
   //will return true or false to $wasSuccessful
-  // $wasSuccessful = $account->register($username, $firstName, $lastName, $email, $email2, $password, $password2); //call register function in Account.php file
+  $wasSuccessful = $account->register($username, $firstName, $lastName, $email, $email2, $password, $password2); //call register function in Account.php file
 
-  // if($wasSuccessful == true){ //if there are no errors
-  //   $_SESSION['userLoggedIn'] = $username;
-  //   header("Location: welcome.php"); //redirect to index page
-  // }
-  echo "<b>Please contact the admin for account registration.<br />\n";
+  if($wasSuccessful == true){ //if there are no errors
+    $_SESSION['userLoggedIn'] = $username;
+    header("Location: welcome.php"); //redirect to index page
+  }
 }
 ?>
