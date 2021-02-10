@@ -129,7 +129,7 @@
             </p>
             <p>
               <!-- <label for="password2">Confirm password</label> -->
-              <input id="password2" name="password2" type="password" placeholder="Password" required>
+              <input id="password2" name="password2" type="password" placeholder="Confirm Password" required>
             </p>
             <button type="submit" name="registerButton">Sign Up</button>
             <!--hides the Create new account form-->
@@ -139,16 +139,6 @@
 
           </form>
         </div>
-        <!--text to the right of login-->
-        <!--<div id="loginText">
-          <h1>Get great music, right now</h1>
-          <h2>Listen to a variety of songs</h2>
-          <ul>
-            <li>Discover some music you will enjoy</li>
-            <li>Upload your own music</li>
-            <li>Follow artists of your liking</li>
-          </ul>
-        </div>-->
       </div>
     </div>
   </body>
