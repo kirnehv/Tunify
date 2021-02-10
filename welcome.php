@@ -1,11 +1,4 @@
-<!--top half of the original index...
-we do this because every page is going to include the nav side bar AND
-the nowPlayingBar-->
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-include("includes/header.php"); ?>
+<?php include("includes/header.php"); ?>
 <!--text on top of albums grid-->
 <h1 class="pageHeadingBig">Favorites</h1>
 <!--albums grid container-->
