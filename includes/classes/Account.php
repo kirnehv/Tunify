@@ -24,19 +24,20 @@ class Account{
     }
   }
   public function register($un, $fn, $ln, $em, $em2, $pw, $pw2){
-    $this->validateUsername($un);
-    $this->validateFirstName($fn);
-    $this->validateLastName($ln);
-    $this->validateEmails($em, $em2);
-    $this->validatePasswords($pw, $pw2);
-
-    if(empty($this->errorArray) == true){ //if there are no errors
-      //Insert into database
-      return $this->insertUserDetails($un, $fn, $ln, $em, $pw); //if no errors, call this function to insert userDetails to DB
-    }
-    else{
-      return false;
-    }
+    return "<span class='errorMessage'>Please contact admin for registration.</span>";
+    // $this->validateUsername($un);
+    // $this->validateFirstName($fn);
+    // $this->validateLastName($ln);
+    // $this->validateEmails($em, $em2);
+    // $this->validatePasswords($pw, $pw2);
+    //
+    // if(empty($this->errorArray) == true){ //if there are no errors
+    //   //Insert into database
+    //   return $this->insertUserDetails($un, $fn, $ln, $em, $pw); //if no errors, call this function to insert userDetails to DB
+    // }
+    // else{
+    //   return false;
+    // }
   }
 
   //checks the error message and checks if it exists in our class
