@@ -2,7 +2,7 @@
 <!--Creates labels, input boxes, input box labels, buttons-->
   <head>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <title>Welcome to Tunify</title>
     <!--link register.css file-->
     <link rel="stylesheet" type="text/css" href="assets/css/welcome.css">

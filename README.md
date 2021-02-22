@@ -3,9 +3,9 @@ A Spotify like web app music player.
 
 Languages used: PHP, HTML, CSS, SQL (phpMyAdmin UI), JavaScript
 
-![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_6.png?raw=true)
 ![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_1.png?raw=true)
 ![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_2.png?raw=true)
+![alt text](https://github.com/kirnehv/Tunify/blob/master/screenshots/tunify_3.png?raw=true)
 
 ## Dependencies
 * Web Server (such as [Apache](https://www.apache.org/))
