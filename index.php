@@ -21,7 +21,7 @@
       <h2> Your music. Anytime. Anywhere. <h2>
     </div>
   </body>
-  <footer>
+  <!-- <footer>
     <div id="bottomBackground">
-  </footer>
+  </footer> -->
 </html>
