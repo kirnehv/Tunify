@@ -11,6 +11,7 @@ services:
       - php
     networks:
       - reverse
+      - tunfiy
   php:
       build:
         context: .
