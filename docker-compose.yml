@@ -5,12 +5,12 @@ services:
     build:
       context: .
       target: tunify-web
-    ports:
-      - "8080:80"
     volumes:
         - .:/code
     links:
       - php
+    networks:
+      - reverse
   php:
       build:
         context: .
@@ -18,19 +18,17 @@ services:
       container_name: tunify-php
       volumes:
         - .:/code
-      ports:
-        - "9000:9000"
 
   mysql:
     image: mysql:latest
     container_name: tunify-db
-    ports:
-      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: tunify
       MYSQL_DATABASE: dbName
       MYSQL_USER: dbUser
       MYSQL_PASSWORD: tunify
+    volumes:
+      - tunify-db:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -42,3 +40,10 @@ services:
       - PMA_USER=root
       - PMA_PASSWORD=tunify
       - PHP_UPLOAD_MAX_FILESIZE=100MB
+
+networks:
+  reverse:
+    name: reverse_default
+
+volumes:
+  tunify-db:
