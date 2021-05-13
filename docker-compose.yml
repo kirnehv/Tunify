@@ -28,7 +28,7 @@ services:
       MYSQL_USER: dbUser
       MYSQL_PASSWORD: tunify
     volumes:
-      - tunify-db:/var/lib/mysql
+      - db:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -45,6 +45,8 @@ services:
 networks:
   reverse:
     name: reverse_default
+  tunify:
+    name: tunify_default
 
 volumes:
-  tunify-db:
+  db:
