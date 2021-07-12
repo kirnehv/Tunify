@@ -75,22 +75,17 @@ html, body{
   letter-spacing: 3px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   #background h1{
-    margin-top: 300pt;
-    text-align: center;
+    margin-top: 350pt;
     font-size: 140px;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 3px;
-    font-weight: 900;
   }
   #background h2{
-    margin-top: 65pt;
-    text-align: center;
+    margin-top: 115pt;
     font-size: 30px;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 3px;
+  }
+  .navbar a {
+    margin-right: 0px;
+    font-size: 2rem;
   }
 }
