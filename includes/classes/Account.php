@@ -18,7 +18,7 @@ class Account{
     echo "<script>console.log('Debug Objects: " . $query . "' );</script>";
     //check if username or password is correct
     // $query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
-    if(mysqli_num_rows($query)==true){
+    if($query==true){
       //if even 1 exists, return true
       return true;
     }else{
