@@ -11,9 +11,16 @@ class Account{
 
   public function login($un, $pw){
     $pw = md5($pw); //encrypt password
+    // prepare and bind
+    $stmt = mysqli_prepare($this->con, "SELECT * FROM users WHERE username=? AND password=?");
+    mysqli_stmt_bind_param($stmt, "ss", $un, $pw);
+    $query = mysqli_stmt_execute($stmt);
 
+    <script>
+      console.log(<?= json_encode($query); ?>);
+    </script>
     //check if username or password is correct
-    $query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
+    // $query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
     if(mysqli_num_rows($query)==1){
       //if even 1 exists, return true
       return true;
