@@ -15,7 +15,6 @@ class Account{
     $stmt = mysqli_prepare($this->con, "SELECT * FROM users WHERE username=? AND password=?");
     mysqli_stmt_bind_param($stmt, "ss", $un, $pw);
     $query = mysqli_stmt_execute($stmt);
-    echo "<script>console.log('Debug Objects: " . $query . "' );</script>";
     //check if username or password is correct
     // $query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
     if($query==true){
